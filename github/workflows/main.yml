@@ -1,0 +1,12 @@
+name: Turbo Hunter V2
+on:
+  workflow_dispatch:
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: pip install pyTelegramBotAPI requests
+      - name: Run Bot
+        run: python bot.py
